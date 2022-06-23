@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BoltaShop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <!-- Css Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+</head>
+<body>
+
+    <!-- OLD header -->
+    <p>
+        @*<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BoltaShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+        </ul>
+        @*<partial name="_LoginPartial" />
+        </div>
+        </div>
+        </nav>
+        </header>*@
+    </p>
+
+    <header class="header-section">
+
+        <!-- OLD Phone Email Lang Social media -->
+        <p>
+            @*<div class="header-top">
+            <div class="container">
+            <div class="ht-left">
+            <div class="mail-service">
+            <i class=" fa fa-envelope"></i>bolta@gmail.com
+            </div>
+            <div class="phone-service">
+            <i class=" fa fa-phone"></i>+385 98 870 888
+            </div>
+            </div>
+            <div class="ht-right">
+            <partial name="_LoginPartial" />
+            <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
+
+
+
+            <div class="lan-selector">
+            <select class="language_drop" name="countries" id="countries" style="width:300px">
+            <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt" data-title="English">English</option>
+            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu" data-title="Bangladesh">German </option>
+            </select>
+            </div>
+            <div class="top-social">
+            <a href="#"><i class="ti-facebook"></i></a>
+            <a href="#"><i class="ti-twitter-alt"></i></a>
+            <a href="#"><i class="ti-linkedin"></i></a>
+            <a href="#"><i class="ti-pinterest"></i></a>
+            </div>
+            </div>
+            </div>
+            </div>*@
+        </p>
+
+        <div class="container">
+            <div class="inner-header">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="logo">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">BoltaShop</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="advanced-search">
+                            <button type="button" class="category-btn">All Categories</button>
+                            <div class="input-group">
+                                <input type="text" placeholder="What do you need?" />
+                                <button type="button"><i class="ti-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-right col-md-3">
+                        <ul class="nav-right">
+                            <li class="heart-icon">
+                                <a href="#">
+                                    <i class="icon_heart_alt"></i>
+                                    <span>1</span>
+                                </a>
+                            </li>
+                            <li class="cart-icon">
+                                <a href="#">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    @*<i class="icon_bag_alt"></i>*@
+                                    <span>2</span>
+                                </a>
+
+
+                                <!-- Cart hover -->
+
+                                <div class="cart-hover">
+                                    <div class="select-items">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="si-pic"><img src="/img/1997 Rudina/1997 Rudina 10.jpg" width="70px" /></td>
+                                                    <td class="si-text">
+                                                        <div class="product-selected">
+                                                            <p>300.00 Kn x 1</p>
+                                                            <h6>Rudina</h6>
+                                                        </div>
+                                                    </td>
+                                                    <td class="si-close">
+                                                        <i class="ti-close"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="si-pic"><img src="/img/1998 Puvarija/Puvarija 00.jpg" width="70px" /></td>
+                                                    <td class="si-text">
+                                                        <div class="product-selected">
+                                                            <p>300.00 Kn x 1</p>
+                                                            <h6>Puvarija</h6>
+                                                        </div>
+                                                    </td>
+                                                    <td class="si-close">
+                                                        <i class="ti-close"></i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="select-total">
+                                        <span>total:</span>
+                                        <h5>600.00 Kn</h5>
+                                    </div>
+                                    <div class="select-button">
+                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cart-price">600.00 Kn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Navigation -->
+        <div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    @*<div class="depart-btn">
+                        <i class="ti-menu"></i>
+                        <span>All Books</span>
+                        <ul class="depart-hover">
+                            <li class="active"><a href="#">Groblja Požeške Doline</a></li>
+                            <li><a href="#">Rudina</a></li>
+                            <li><a href="#">Puvarija</a></li>
+                            <li><a href="#">Sesvetački Kraj U Srcu Poljadije</a></li>
+                            <li><a href="#">Pjesme - Vladimir Hip</a></li>
+                            <li><a href="#">Putopisne Impresije - Branko Živković</a></li>
+                            <li><a href="#">Osam Generacija Thallera</a></li>
+                            <li><a href="#">Vetovo</a></li>
+                            <li><a href="#">100 Godina DVD Buk</a></li>
+                            <li><a href="#">Almanah Gimnazije</a></li>
+                            <li><a href="#">Brestovac</a></li>
+                            <li><a href="#">Smotra</a></li>
+                        </ul>
+                    </div>*@
+                    <div class="depart-btn">
+                        <i class="ti-menu"></i>
+                        <span>Admin</span>
+                        <ul class="depart-hover">
+                            <li><a class="nav-link" asp-area="" asp-controller="Author" asp-action="Index">Author</a></li>
+                            <li><a href="#">Book</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </div>
+                <nav class="nav-menu mobile-menu">
+                    <ul>
+                        @*<li class="active"><a href="#">Home</a></li>*@
+                        <li><a class="nav-link" asp-area="" asp-controller="Book" asp-action="Index">Shop</a></li>
+                        @*<li>
+                        <a href="#">Collection</a>
+                        <ul class="dropdown">
+                        <li><a href="#">Men's</a></li>
+                        <li><a href="#">Women's</a></li>
+                        <li><a href="#">Kid's</a></li>
+                        </ul>
+                        </li>*@
+                        <li><a href="#">Blog</a></li>
+                        <li><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        <li><a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
+                        <li><partial name="_LoginPartial" /></li>
+
+                        <!-- Modal Login -->
+                        @*<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">BoltaShop</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="login-form">
+                                            <form id="account" method="post">
+                                                <div class="mb-3 text-center title">
+                                                    <span>BoltaShop - Login</span>
+                                                </div>
+                                                <div asp-validation-summary="All" class="text-danger"></div>
+                                                <div class="form-group">
+                                                    <input asp-for="Input.Email" class="form-control" placeholder="Username" />
+                                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <label class="float-left form-check-label" asp-for="Input.RememberMe">
+                                                        <input asp-for="Input.RememberMe" />
+                                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+                        @*<li>
+                        <a href="#">Pages</a>
+                        <ul class="dropdown">
+                        <li><a href="#">Blog Details</a></li>
+                        <li><a href="#">Shopping Cart</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Login</a></li>
+                        </ul>
+                        </li>*@
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @* <div class="container">
+    <main role="main" class="pb-3">*@
+
+    @RenderBody()
+
+    @*      </main>
+    </div>*@
+
+
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <a href="#">Bolta</a>
+                        </div>
+                        <ul>
+                            <li>Address: Požega, J.J. Strossmayera 4.</li>
+                            <li>Phone: +385 98 870 888</li>
+                            <li>Email: kresimir.wittenberg@gmail.com</li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Information</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-widget">
+                        <h5>My Account</h5>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Shopping Cart</a></li>
+                            <li><a href="#">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="newslatter-item">
+                        <h5>Join Our Newsletter Now</h5>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Enter Your Mail" />
+                            <button type="button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-reserved">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-text">
+
+                            Copyright &copy;2022 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.behance.net/kwittenberg" target="_blank">K. Wittenberg</a>
+
+                        </div>
+                        <div class="payment-pic">
+                            <img src="img/payment-method.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Counter Script -->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("2022-07-01").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hrs").innerHTML = hours;
+            document.getElementById("min").innerHTML = minutes;
+            document.getElementById("sec").innerHTML = seconds;
+
+            document.getElementById("counter").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("counter").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery.zoom.min.js"></script>
+    <script src="~/js/jquery.dd.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>

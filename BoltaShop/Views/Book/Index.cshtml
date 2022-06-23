@@ -1,0 +1,62 @@
+﻿@using BoltaShop.Models.Dbo
+@model IEnumerable<Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<br />
+<br />
+
+<!-- ======= Books ======= -->
+
+<div class="container" data-aos="fade-up">
+    <header class="section-header">
+        <h3>Books</h3>
+    </header>
+
+    <br />
+    <br />
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="product-item" style="max-width: 350px;">
+                    <div class="pi-pic rounded-2">
+                        <img src="@item.Slika" />
+                        @*<div class="percentage"><i class="fa-solid fa-percent"></i></div>*@
+                        <div class="icon">
+                            <i class="icon_heart_alt"></i>
+                        </div>
+                        <ul>
+                            <li class="w-icon active"><a asp-route-id="@item.Id" asp-controller="Book" asp-action="Details"><i class="fa-solid fa-eye"></i></a></li>
+                            <li class="quick-view"><a asp-route-id="@item.Id" asp-controller="Book" asp-action="Details"><i class="fa-solid fa-cart-plus"></i> Add To Cart</a></li>
+                            <li class="w-icon active"><a href="#"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="pi-text">
+                        <div class="catagory-name">
+                            
+                        
+
+                       @* @foreach (var author in Model)
+                        {
+                        @author.AuthorsBooks.Select(p => p.Author.Id)
+                        }*@
+
+
+
+                        </div>
+                        <a href="#"><h5>@item.Naziv</h5></a>
+                        <div class="product-price">@item.Cijena Kn <span>@item.CijenaSnizenje Kn</span></div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_CreateItem", "Book") 
