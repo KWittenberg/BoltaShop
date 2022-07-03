@@ -1,0 +1,273 @@
+﻿@model BoltaShop.Models.Dbo.Book
+
+
+<div class="AddPopUp">
+    @Html.Label("Add pop up")
+</div>
+<div class="modal fade" id="MyPopUp" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                here are going your controls etc
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".AddPopUp").click(function (e) {
+                $('#MyPopUp').modal('show');
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <!-- Import jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+
+
+<body>
+    <div class="container mt-2">
+
+        <!-- Input field to accept user input -->
+        Name: <input type="text" name="name"
+                     id="name"><br><br>
+
+        Marks: <input type="text" name="marks"
+                      id="marks"><br><br>
+
+        <!-- Button to invoke the modal -->
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="submit">Submit</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <!-- Data passed is displayed in this part of the modal body -->
+                        <h6 id="modal_body"></h6>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("#submit").click(function() { var name = $("#@Model.Naziv").val(); var marks = $("#Model.Ime").val(); var str = "Entered " + @Model.Naziv + @Model.Cijena;
+        $("#modal_body").html(str);
+        });
+    </script>
+</body>
+
+
+
+
+
+
+
+
+@*
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <h4>Book</h4>
+                @Html.DisplayNameFor(model => model.Naziv)
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OpisKratki)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OpisKratki)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Slika)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Slika)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dostupno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dostupno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cijena)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cijena)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Snizenje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Snizenje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CijenaSnizenje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CijenaSnizenje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GodinaIzdanja)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GodinaIzdanja)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nakladnik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nakladnik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Isbn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Isbn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookCategory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookCategory)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookBinding)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookBinding)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojStranica)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BrojStranica)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sirina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sirina)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Visina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Visina)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Debljina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Debljina)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tezina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tezina)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+*@
