@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Data",
+    "\\Models",
+    "\\Models\\Dbo"
   ],
+  "SelectedNode": "\\Models\\Dbo\\ApplicationUser.cs",
   "PreviewInSolutionExplorer": false
 }

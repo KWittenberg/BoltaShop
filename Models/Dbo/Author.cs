@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using BoltaShop.Models.Base;
 using BoltaShop.Repository.Interface;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 

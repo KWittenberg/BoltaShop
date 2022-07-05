@@ -1,5 +1,4 @@
-﻿using BoltaShop.Data;
-using BoltaShop.Models.Dbo;
+﻿using BoltaShop.Models.Dbo;
 using BoltaShop.Repository.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

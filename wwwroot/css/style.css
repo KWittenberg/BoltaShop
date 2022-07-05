@@ -824,15 +824,15 @@ ol {
 }
 
 .hero-items .off-card {
-	height: 154px;
-	width: 154px;
+	height: 150px;
+	width: 150px;
 	padding-top: 40px;
 	border-radius: 50%;
 	text-align: center;
 	line-height: 140px;
 	position: absolute;
 	left: 47%;
-	top: 160px;
+	top: 80px;
 	background: #e7ab3c;
 	z-index: 1;
 	-webkit-transform: rotate(45deg);
