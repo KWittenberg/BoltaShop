@@ -1,16 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace BoltaShop.Models.Dbo;
 
-namespace BoltaShop.Models.Dbo
+public class ShoppingCartItem
 {
-    public class ShoppingCartItem
-    {
-        [Key]
-        public int Id { get; set; }
+    [Key]
+    public int Id { get; set; }
 
-        public Book Book { get; set; }
-        public int Amount { get; set; }
+    [ForeignKey("BookId")]
+    public Book Book { get; set; }
+    public int BookId { get; set; }
 
-
-        public string ShoppingCartId { get; set; }
-    }
+    public int Amount { get; set; }
+    
+    public string ShoppingCartId { get; set; }
 }

@@ -1,8 +1,7 @@
-﻿namespace BoltaShop.Models.Dto
+﻿namespace BoltaShop.Models.Dto;
+
+public enum BookCategory
 {
-    public enum BookCategory
-    {
-        Monografije = 1,
-        Pjesme = 2
-    }
+    Monografije = 1,
+    Pjesme = 2
 }

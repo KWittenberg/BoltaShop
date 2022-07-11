@@ -1,15 +1,11 @@
-﻿using BoltaShop.Models.Dbo;
+﻿namespace BoltaShop.Models.ViewModel;
 
-namespace BoltaShop.Models.ViewModel
+public class BookDropdownsViewModel
 {
-    public class BookDropdownsViewModel
+    public BookDropdownsViewModel()
     {
-        public BookDropdownsViewModel()
-        {
-            Authors = new List<Author>();
-        }
-
-        
-        public List<Author> Authors { get; set; }
+        Authors = new List<Author>();
     }
+    
+    public List<Author> Authors { get; set; }
 }

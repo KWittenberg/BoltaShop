@@ -1,21 +1,17 @@
-﻿using BoltaShop.Data.Cart;
-using Microsoft.AspNetCore.Mvc;
+﻿namespace BoltaShop.Data.ViewComponents;
 
-namespace eTickets.Data.ViewComponents
+public class ShoppingCartSummary : ViewComponent
 {
-    public class ShoppingCartSummary: ViewComponent
+    private readonly ShoppingCart _shoppingCart;
+    public ShoppingCartSummary(ShoppingCart shoppingCart)
     {
-        private readonly ShoppingCart _shoppingCart;
-        public ShoppingCartSummary(ShoppingCart shoppingCart)
-        {
-            _shoppingCart = shoppingCart;
-        }
+        _shoppingCart = shoppingCart;
+    }
 
-        public IViewComponentResult Invoke()
-        {
-            var items = _shoppingCart.GetShoppingCartItems();
+    public IViewComponentResult Invoke()
+    {
+        var items = _shoppingCart.GetShoppingCartItems();
 
-            return View(items.Count);
-        }
+        return View(items.Count);
     }
 }

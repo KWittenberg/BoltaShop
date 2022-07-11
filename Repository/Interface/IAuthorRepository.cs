@@ -1,9 +1,5 @@
-﻿using BoltaShop.Models.Dbo;
+﻿namespace BoltaShop.Repository.Interface;
 
-namespace BoltaShop.Repository.Interface
+public interface IAuthorRepository : IEntityBaseRepository<Author>
 {
-    public interface IAuthorRepository: IEntityBaseRepository<Author>
-    {
-        
-    }
 }

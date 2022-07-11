@@ -1,10 +1,7 @@
-﻿using BoltaShop.Data.Cart;
+﻿namespace BoltaShop.Models.ViewModel;
 
-namespace BoltaShop.Models.ViewModel
+public class ShoppingCartViewModel
 {
-    public class ShoppingCartViewModel
-    {
-        public ShoppingCart ShoppingCart { get; set; }
-        public double ShoppingCartTotal { get; set; }
-    }
+    public ShoppingCart ShoppingCart { get; set; }
+    public double ShoppingCartTotal { get; set; }
 }

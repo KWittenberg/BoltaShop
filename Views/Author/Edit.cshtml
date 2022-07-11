@@ -1,49 +1,70 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model BoltaShop.Models.Dbo.Author
 @{
-    ViewData["Title"] = "Update author";
+    ViewData["Title"] = "Update Author";
 }
 
-<div class="row text">
-    <div class="col-md-8 offset-2">
+<br />
+<br />
+<br />
+<br />
 
-        <div class="row">
-            <div class="col-md-8 offset-2">
-                <form asp-action="Edit">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                    <div class="form-group text-center">
-                        <img id="ImagePreview" class="border-info rounded-circle" style="max-width: 150px" />
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6 offset-3">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Update Author</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form method="post" asp-action="Edit">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group text-center">
+                                    <img id="ImagePreview" class="border-info rounded" style="max-width: 250px" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Slika" class="control-label"></label>
+                                    <input asp-for="Slika" class="form-control" placeholder=" author Image" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label> &nbsp; &nbsp; FistName</label>
+                                    <input asp-for="Ime" type="text" class="form-control" placeholder=" author FirstName">
+                                    <span asp-validation-for="Ime" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label> &nbsp; &nbsp; LastName</label>
+                                    <input asp-for="Prezime" type="text" class="form-control" placeholder=" author LastName">
+                                    <span asp-validation-for="Prezime" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label> &nbsp; &nbsp; Description</label>
+                                    <input asp-for="Opis" type="text" class="form-control" placeholder=" author Description">
+                                    <span asp-validation-for="Opis" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label asp-for="Slika" class="control-label"></label>
-                        <input asp-for="Slika" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Ime" class="control-label"></label>
-                        <input asp-for="Ime" class="form-control" />
-                        <span asp-validation-for="Ime" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Prezime" class="control-label"></label>
-                        <input asp-for="Prezime" class="form-control" />
-                        <span asp-validation-for="Prezime" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Opis" class="control-label"></label>
-                        <input asp-for="Opis" class="form-control" />
-                    </div>
-
-
-                    <div class="form-group">
-                        <input type="submit" value="Update" class="btn btn-outline-success float-right" />
-                        <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                    <!-- /.card-body -->
+                    <div class="card-footer" align="right">
+                        <button type="submit" class="btn btn-primary">Update</button><a asp-controller="Author" asp-action="Index" class="btn btn-secondary">Back</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<br />
+<br />
+<br />
+<br />
 
 @section Scripts{
     <script>

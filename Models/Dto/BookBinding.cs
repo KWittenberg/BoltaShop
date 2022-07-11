@@ -1,11 +1,9 @@
-﻿using System.ComponentModel;
+﻿namespace BoltaShop.Models.Dto;
 
-namespace BoltaShop.Models.Dto
+public enum BookBinding
 {
-    public enum BookBinding
-    {
-        Tvrdi = 1,
-        Meki = 2,
-        [Description("Meki s klapnama")] MekiK = 3,
-    }
+    Tvrdi = 1,
+    Meki = 2,
+    [Description("Meki s klapnama")]
+    MekiK = 3
 }

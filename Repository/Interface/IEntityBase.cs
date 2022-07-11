@@ -1,7 +1,6 @@
-﻿namespace BoltaShop.Repository.Interface
+﻿namespace BoltaShop.Repository.Interface;
+
+public interface IEntityBase
 {
-    public interface IEntityBase
-    {
-        int Id { get; set; }
-    }
+    int Id { get; set; }
 }

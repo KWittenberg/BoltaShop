@@ -1,47 +1,68 @@
 ﻿@model BoltaShop.Models.Dbo.Author
-
 @{
-    ViewData["Title"] = "Delete author";
+    ViewData["Title"] = "Delete Author";
 }
+<br />
+<br />
+<br />
+<br />
 
-<div class="row text">
-    <div class="col-md-8 offset-2">
-
-        <div class="row">
-            <div class="col-md-8 offset-2">
-                <div class="form-group text-center">
-                    <img class="border-info rounded-circle" style="max-width: 150px" id="ImagePreview" />
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6 offset-3">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Delete</h3>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Slika" class="control-label"></label>
-                    <input asp-for="Slika" class="form-control" readonly />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Ime" class="control-label"></label>
-                    <input asp-for="Ime" class="form-control" readonly />
-                    <span asp-validation-for="Ime" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Prezime" class="control-label"></label>
-                    <input asp-for="Prezime" class="form-control" readonly />
-                    <span asp-validation-for="Prezime" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Opis" class="control-label"></label>
-                    <input asp-for="Opis" class="form-control" readonly />
-
-                </div>
-                <div class="form-group">
-                    <form asp-action="Delete">
-                        <input type="hidden" asp-for="Id" />
-                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
-                    </form>
-                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
-                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form method="post" asp-action="Delete">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group text-center">
+                                    <img id="ImagePreview" class="border-info rounded" style="max-width: 250px" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Slika" class="control-label"></label>
+                                    <input asp-for="Slika" disabled class="form-control" placeholder=" author Image" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label> &nbsp; &nbsp; FistName</label>
+                                    <input asp-for="Ime" disabled type="text" class="form-control" placeholder=" author FirstName">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label> &nbsp; &nbsp; LastName</label>
+                                    <input asp-for="Prezime" disabled type="text" class="form-control" placeholder=" author LastName">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label> &nbsp; &nbsp; Description</label>
+                                    <input asp-for="Opis" disabled type="text" class="form-control" placeholder=" author Description">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer" align="right">
+                        <button type="submit" class="btn btn-primary">Delete</button><a asp-controller="Author" asp-action="Index" class="btn btn-secondary">Back</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+<br />
+<br />
+<br />
+<br />
 
 @section Scripts{
     <script>

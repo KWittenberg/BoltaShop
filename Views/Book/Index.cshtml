@@ -1,6 +1,5 @@
 ﻿@using BoltaShop.Models.Dbo
 @model IEnumerable<Book>
-
 @{
     ViewData["Title"] = "Books";
 }
@@ -21,7 +20,7 @@
         <div class="row">
             @foreach (var item in Model)
             {
-                <div class="product-item" style="max-width: 350px;">
+                <div class="product-item" style="max-width: 370px;">
                     <div class="pi-pic rounded-2">
                         <img src="@item.Slika">
 
@@ -54,7 +53,15 @@
 
                         </div>
                         <a href="#"><h5>@item.Naziv</h5></a>
-                        <div class="product-price">@item.Cijena Kn <span>@item.CijenaSnizenje Kn</span></div>
+                        <div class="product-price">
+                            @item.Cijena Kn
+                            @if (item.CijenaSnizenje != 0)
+                            {
+                                <span>@item.CijenaSnizenje Kn</span>
+                            }
+                            <br />
+                            <br />
+                        </div>
                     </div>
                 </div>
             }
@@ -62,6 +69,10 @@
     </div>
 </div>
 
+<br />
+<br />
+<br />
+<br />
 
 @await Html.PartialAsync("_CreateItem", "Book")
 @await Html.PartialAsync("_QuickView", "Book")
